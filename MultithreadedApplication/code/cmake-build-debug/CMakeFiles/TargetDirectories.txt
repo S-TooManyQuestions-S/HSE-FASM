@@ -1,0 +1,3 @@
+/Users/toomanyquestions/Desktop/2_курс/Архитектура_Вычислительных_Систем/HSE-FASM/MultithreadedApplication/code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/toomanyquestions/Desktop/2_курс/Архитектура_Вычислительных_Систем/HSE-FASM/MultithreadedApplication/code/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/toomanyquestions/Desktop/2_курс/Архитектура_Вычислительных_Систем/HSE-FASM/MultithreadedApplication/code/cmake-build-debug/CMakeFiles/Multithreaded_application.dir
