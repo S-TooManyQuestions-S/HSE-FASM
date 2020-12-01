@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/toomanyquestions/Desktop/2_курс/Архитектура_Вычислительных_Систем/HSE-FASM/Introduction-to-OpenMP/code/test_openmp/main.cpp
+iostream
+-
+vector
+-
+unistd.h
+-
+omp.h
+-
+
+/usr/local/include/omp.h
+stdlib.h
+-
+stdint.h
+-
+
