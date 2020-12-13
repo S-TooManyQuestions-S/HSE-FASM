@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/toomanyquestions/Desktop/2_курс/Архитектура_Вычислительных_Систем/HSE-FASM/MicroProject_2/code/main.cpp
+pthread.h
+-
+semaphore.h
+-
+cstdlib
+-
+cstdio
+-
+unistd.h
+-
+

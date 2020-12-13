@@ -52,12 +52,12 @@ int main() {
     //расчитываем в каком секторе прячется Винни (случайно)
     int sector = rand() % sectors_amount;
     //помещаем винни в сектор леса
-    sectors[sector] = 1;
+    sectors[1] = 1;
     //выводим сектор на экран для информирования
     cout << "Winnie the Pooh is in the " << sector << "th sector" << endl << "////////////////////////////////////////"
                                                                              "///" << endl;
     //блок предназначенный для выполнения параллельно
-#pragma omp parallel shared(wanted, sectors) default(shared)
+#pragma omp parallel shared(wanted, currentSector) default(shared)
     {
         //получение номера потока
         int rNum = omp_get_thread_num();
@@ -67,10 +67,15 @@ int main() {
             //критическая секция
 #pragma omp critical
             {
-                //считываем сектор, который проверяет данный поток и сдвигаем указатель на следующий сектор
-                i = currentSector++;
-                //получаем значение данного сектора в массиве (есть там Винни или нет) 1 - присутствует 0 - отсутсвует
-                sector = sectors[i];
+                if(currentSector < sectors_amount){
+                    //получаем значение данного сектора в массиве (есть там Винни или нет) 1 - присутствует 0 - отсутсвует
+                    sector = sectors[currentSector++];
+                    i = currentSector - 1;
+                }
+                else{
+                    sleep(100);
+                }
+
             }
 
             //если в данном секторе присутствует Винни - пчелы его находят
